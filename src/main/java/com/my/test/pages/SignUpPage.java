@@ -8,6 +8,13 @@ public class SignUpPage {
 	public SignUpPage() {
 		System.out.print("Signup Page");
 		
+		
+		}
+	By username = By.id("username");
+	public void loginPage() {
+		System.out.println("page");
+		
 	}
+
 
 }
