@@ -31,5 +31,11 @@ public class HomePageTest extends BaseTest {
 		Assert.assertEquals(desktopsValue, Constants.DESKTOPS_MENU);
 		
 	}
+	@Test
+	public void verifyLaptopAndNotebooksMenuTest() {
+		String laptopAndNotebooksValue = homePage.getLaptopAndNotebooksValue();
+		System.out.println("laptop and notebooks menu is :" + laptopAndNotebooksValue);
+		Assert.assertEquals(laptopAndNotebooksValue, Constants.LAPTOPS_NOTEBOOKS);
+	}
 
 }
