@@ -7,5 +7,6 @@ public class Constants {
 	public static final String HEADER_PAGE_TITLE = "Qafox.com";
 	public static final String DESKTOPS_MENU = "Desktops";
 	public static final String LAPTOPS_NOTEBOOKS = "Laptops & Notebooks";
+	public static final String CONTINUE_BUTTON = "Continue";
 
 }

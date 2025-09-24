@@ -29,5 +29,11 @@ public class LoginPage extends BasePage{
 		
 		return new HomePage(driver);
 	}
+	public String getContinueNewCustomer() {
+		if(driver.findElement(continueNewCustomer).isDisplayed()) {
+			return driver.findElement(continueNewCustomer).getText();
+		}
+		return null;
+	}
 
 }
