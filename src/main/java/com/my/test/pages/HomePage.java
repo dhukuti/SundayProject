@@ -10,6 +10,7 @@ public class HomePage extends BasePage {
 	private WebDriver driver;
 	private By header = By.xpath("//a[text()='Qafox.com']");
 	
+	
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
 	}

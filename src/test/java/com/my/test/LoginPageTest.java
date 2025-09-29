@@ -19,5 +19,11 @@ public class LoginPageTest extends BaseTest {
 	public void loginTest() {
 		loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
 	}
+	@Test
+	public void verifyRegisterAccountContinueTest() {
+		String registerAccountContinueValue = loginPage.getRegisterAccountContinueValue();
+		System.out.println("Register Account :" + registerAccountContinueValue);
+		Assert.assertEquals(registerAccountContinueValue, Constants.REGISTER_ACCOUNT_CONTINUE);
+	}
 
 }
