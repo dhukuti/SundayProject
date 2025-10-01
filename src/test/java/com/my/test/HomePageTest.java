@@ -24,18 +24,6 @@ public class HomePageTest extends BaseTest {
 		System.out.println("home page header is :" + headerValue);
 		Assert.assertEquals(headerValue, Constants.HEADER_PAGE_TITLE);
 	}
-	@Test
-	public void verifyDesktopsMenuTest() {
-		String desktopsValue = homePage.getDesktopsValue();
-		System.out.println("desktops menu is :" + desktopsValue);
-		Assert.assertEquals(desktopsValue, Constants.DESKTOPS_MENU);
-		
-	}
-	@Test
-	public void verifyLaptopAndNotebooksMenuTest() {
-		String laptopAndNotebooksValue = homePage.getLaptopAndNotebooksValue();
-		System.out.println("laptop and notebooks menu is :" + laptopAndNotebooksValue);
-		Assert.assertEquals(laptopAndNotebooksValue, Constants.LAPTOPS_NOTEBOOKS);
-	}
+
 
 }

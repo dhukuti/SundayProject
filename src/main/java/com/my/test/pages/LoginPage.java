@@ -11,7 +11,8 @@ public class LoginPage extends BasePage{
 	private By emailId = By.id("input-email");
 	private By password = By.id("input-password");
 	private By loginButton = By.cssSelector("input.btn.btn-primary");
-	private By continueNewCustomer = By.linkText("Continue");
+	private By registerAccountContinue = By.xpath("//a[text()='Continue']");
+
 	
 	//2. Constructor of the page class
 	public LoginPage(WebDriver driver) {
@@ -29,9 +30,10 @@ public class LoginPage extends BasePage{
 		
 		return new HomePage(driver);
 	}
-	public String getContinueNewCustomer() {
-		if(driver.findElement(continueNewCustomer).isDisplayed()) {
-			return driver.findElement(continueNewCustomer).getText();
+public String getRegisterAccountContinueValue() {
+		if(driver.findElement(registerAccountContinue).isDisplayed()) {
+			return driver.findElement(registerAccountContinue).getText();
+
 		}
 		return null;
 	}

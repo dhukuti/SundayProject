@@ -12,6 +12,7 @@ public class HomePage extends BasePage {
 	private By desktopsMenu = By.xpath("//a[@class='dropdown-toggle' and @data-toggle='dropdown' and text()='Desktops']");
 	private By laptopsAndNotebooksMenu = By.xpath("//a[text()='Laptops & Notebooks' and @class='dropdown-toggle' and @data-toggle='dropdown']");
 	
+	
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
 	}

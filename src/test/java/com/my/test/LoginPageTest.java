@@ -20,10 +20,11 @@ public class LoginPageTest extends BaseTest {
 		loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
 	}
 	@Test
-	public void verifyNewCustomerContinueButtonTest() {
-		String newCustomerContinueButton = loginPage.getContinueNewCustomer();
-		System.out.println("New Customer button: " + newCustomerContinueButton);
-		Assert.assertEquals(newCustomerContinueButton, Constants.CONTINUE_BUTTON);
+ public void verifyRegisterAccountContinueTest() {
+		String registerAccountContinueValue = loginPage.getRegisterAccountContinueValue();
+		System.out.println("Register Account :" + registerAccountContinueValue);
+		Assert.assertEquals(registerAccountContinueValue, Constants.REGISTER_ACCOUNT_CONTINUE);
+
 	}
 
 }
