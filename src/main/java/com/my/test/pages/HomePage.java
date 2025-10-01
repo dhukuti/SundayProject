@@ -9,6 +9,8 @@ public class HomePage extends BasePage {
 	
 	private WebDriver driver;
 	private By header = By.xpath("//a[text()='Qafox.com']");
+	private By desktopsMenu = By.xpath("//a[@class='dropdown-toggle' and @data-toggle='dropdown' and text()='Desktops']");
+	private By laptopsAndNotebooksMenu = By.xpath("//a[text()='Laptops & Notebooks' and @class='dropdown-toggle' and @data-toggle='dropdown']");
 	
 	
 	public HomePage(WebDriver driver) {
@@ -20,6 +22,18 @@ public class HomePage extends BasePage {
 	public String getHeaderValue() {
 		if(driver.findElement(header).isDisplayed()) {
 			return driver.findElement(header).getText();
+		}
+		return null;
+	}
+	public String getDesktopsValue() {
+		if(driver.findElement(desktopsMenu).isDisplayed()) {
+			return driver.findElement(desktopsMenu).getText();
+		}
+		return null;
+	}
+	public String getLaptopAndNotebooksValue() {
+		if(driver.findElement(laptopsAndNotebooksMenu).isDisplayed()) {
+			return driver.findElement(laptopsAndNotebooksMenu).getText();
 		}
 		return null;
 	}
