@@ -12,6 +12,7 @@ public class LoginPage extends BasePage{
 	private By password = By.id("input-password");
 	private By loginButton = By.cssSelector("input.btn.btn-primary");
 	private By registerAccountContinue = By.xpath("//a[text()='Continue']");
+	private By informationTitle = By.xpath("//h5[text()='Information']");
 
 	
 	//2. Constructor of the page class
@@ -30,12 +31,19 @@ public class LoginPage extends BasePage{
 		
 		return new HomePage(driver);
 	}
-public String getRegisterAccountContinueValue() {
+	public String getRegisterAccountContinueValue() {
 		if(driver.findElement(registerAccountContinue).isDisplayed()) {
 			return driver.findElement(registerAccountContinue).getText();
 
 		}
 		return null;
+	}
+	public String getInformationTielValue() {
+		if(driver.findElement(informationTitle).isDisplayed()) {
+			return driver.findElement(informationTitle).getText();
+		}
+		return null;
+		
 	}
 
 }
