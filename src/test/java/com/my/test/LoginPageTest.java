@@ -28,9 +28,15 @@ public class LoginPageTest extends BaseTest {
 	}
 	@Test
 	public void verifyInformationTitleTest() {
-		String informationTitleText = loginPage.getInformationTielValue();
+		String informationTitleText = loginPage.getInformationTitleValue();
 		System.out.println("Information Title is :" + informationTitleText);
 		Assert.assertEquals(informationTitleText, Constants.INFORMATION_TITLE);
+	}
+	@Test
+	public void verifyCustomerServiceTitleTest() {
+		String customerServiceTitleText = loginPage.getCustomerServiceTitleValue();
+		System.out.println("Customer Service Title is :" + customerServiceTitleText);
+		Assert.assertEquals(customerServiceTitleText, Constants.CUSTOMER_SERVICE_TITLE);
 	}
 
 }

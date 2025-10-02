@@ -13,6 +13,7 @@ public class LoginPage extends BasePage{
 	private By loginButton = By.cssSelector("input.btn.btn-primary");
 	private By registerAccountContinue = By.xpath("//a[text()='Continue']");
 	private By informationTitle = By.xpath("//h5[text()='Information']");
+	private By customerServiceTitle = By.xpath("//h5[text()='Customer Service']");
 
 	
 	//2. Constructor of the page class
@@ -38,12 +39,18 @@ public class LoginPage extends BasePage{
 		}
 		return null;
 	}
-	public String getInformationTielValue() {
+	public String getInformationTitleValue() {
 		if(driver.findElement(informationTitle).isDisplayed()) {
 			return driver.findElement(informationTitle).getText();
 		}
 		return null;
 		
+	}
+	public String getCustomerServiceTitleValue() {
+		if(driver.findElement(customerServiceTitle).isDisplayed()) {
+			return driver.findElement(customerServiceTitle).getText();
+		}
+		return null;
 	}
 
 }
