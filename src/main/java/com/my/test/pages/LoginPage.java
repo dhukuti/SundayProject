@@ -14,6 +14,7 @@ public class LoginPage extends BasePage{
 	private By registerAccountContinue = By.xpath("//a[text()='Continue']");
 	private By informationTitle = By.xpath("//h5[text()='Information']");
 	private By customerServiceTitle = By.xpath("//h5[text()='Customer Service']");
+	private By extrasTitle = By.xpath("//h5[text()='Extras']");
 
 	
 	//2. Constructor of the page class
@@ -49,6 +50,12 @@ public class LoginPage extends BasePage{
 	public String getCustomerServiceTitleValue() {
 		if(driver.findElement(customerServiceTitle).isDisplayed()) {
 			return driver.findElement(customerServiceTitle).getText();
+		}
+		return null;
+	}
+	public String getExtrasTitleValue() {
+		if(driver.findElement(extrasTitle).isDisplayed()) {
+			return driver.findElement(extrasTitle).getText();
 		}
 		return null;
 	}

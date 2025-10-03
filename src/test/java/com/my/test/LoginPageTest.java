@@ -12,8 +12,7 @@ public class LoginPageTest extends BaseTest {
 	public void verifyLoginPageTitleTest() {
 		String title = loginPage.getLoginPageTitle();
 		System.out.println("login page title is : " + title);
-		Assert.assertEquals(title, Constants.LOGIN_PAGE_TITLE);
-				
+		Assert.assertEquals(title, Constants.LOGIN_PAGE_TITLE);			
 	}
 	@Test(priority=2)
 	public void loginTest() {
@@ -37,6 +36,12 @@ public class LoginPageTest extends BaseTest {
 		String customerServiceTitleText = loginPage.getCustomerServiceTitleValue();
 		System.out.println("Customer Service Title is :" + customerServiceTitleText);
 		Assert.assertEquals(customerServiceTitleText, Constants.CUSTOMER_SERVICE_TITLE);
+	}
+	@Test
+	public void verifyExtrasTitleTest() {
+		String extrasTitleText = loginPage.getExtrasTitleValue();
+		System.out.println("Extras title is :" + extrasTitleText);
+		Assert.assertEquals(extrasTitleText, Constants.EXTRAS_TITLE);
 	}
 
 }
