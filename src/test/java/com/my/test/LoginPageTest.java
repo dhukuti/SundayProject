@@ -43,5 +43,11 @@ public class LoginPageTest extends BaseTest {
 		System.out.println("Extras title is :" + extrasTitleText);
 		Assert.assertEquals(extrasTitleText, Constants.EXTRAS_TITLE);
 	}
+	@Test
+	public void verifyMyAccountTitleTest() {
+		String myAccountTitleText = loginPage.getMyAccountTitleValue();
+		System.out.println("My Account title is :" + myAccountTitleText);
+		Assert.assertEquals(myAccountTitleText, Constants.MY_ACCOUNT_TITLE);
+	}
 
 }
