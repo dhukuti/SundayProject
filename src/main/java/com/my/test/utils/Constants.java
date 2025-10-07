@@ -10,5 +10,6 @@ public class Constants {
     public static final String CUSTOMER_SERVICE_TITLE = "Customer Service";
     public static final String EXTRAS_TITLE = "Extras";
     public static final String MY_ACCOUNT_TITLE = "My Account";
+    public static final String NEW_CUSTOMER = "New Customer";
 
 }
