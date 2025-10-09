@@ -11,6 +11,7 @@ public class LoginPage extends BasePage{
 	private By emailId = By.id("input-email");
 	private By password = By.id("input-password");
 	private By loginButton = By.cssSelector("input.btn.btn-primary");
+	private By currencyTitle = By.xpath("//span[text()='Currency']");
 	private By registerAccountContinue = By.xpath("//a[text()='Continue']");
 	private By informationTitle = By.xpath("//h5[text()='Information']");
 	private By customerServiceTitle = By.xpath("//h5[text()='Customer Service']");
@@ -39,6 +40,12 @@ public class LoginPage extends BasePage{
 		if(driver.findElement(registerAccountContinue).isDisplayed()) {
 			return driver.findElement(registerAccountContinue).getText();
 
+		}
+		return null;
+	}
+	public String getCurrencyTitleValue() {
+		if(driver.findElement(currencyTitle).isDisplayed()) {
+			return driver.findElement(currencyTitle).getText();
 		}
 		return null;
 	}

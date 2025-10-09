@@ -23,7 +23,12 @@ public class LoginPageTest extends BaseTest {
 		String registerAccountContinueValue = loginPage.getRegisterAccountContinueValue();
 		System.out.println("Register Account is :" + registerAccountContinueValue);
 		Assert.assertEquals(registerAccountContinueValue, Constants.REGISTER_ACCOUNT_CONTINUE);
-
+	}
+	@Test
+	public void verifyCurrencyTitleTest() {
+		String currencyTitleText = loginPage.getCurrencyTitleValue();
+		System.out.println("Currency Title is :" + currencyTitleText);
+		Assert.assertEquals(currencyTitleText, Constants.CURRENCY_TITLE);
 	}
 	@Test
 	public void verifyInformationTitleTest() {
