@@ -31,6 +31,10 @@ public class LoginPageTest extends BaseTest {
 		Assert.assertEquals(currencyTitleText, Constants.CURRENCY_TITLE);
 	}
 	@Test
+	public void verifySearchBoxExistTest() {
+		String searchBoxExist = loginPage.getSearchBoxValue();
+	}
+	@Test
 	public void verifyInformationTitleTest() {
 		String informationTitleText = loginPage.getInformationTitleValue();
 		System.out.println("Information Title is :" + informationTitleText);
