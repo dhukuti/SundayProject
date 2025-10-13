@@ -31,6 +31,12 @@ public class LoginPageTest extends BaseTest {
 		Assert.assertEquals(currencyTitleText, Constants.CURRENCY_TITLE);
 	}
 	@Test
+	public void verifyPhoneNumberTitleTest() {
+		String phoneNumberText = loginPage.getPhoneNumberTitleValue();
+		System.out.println("Phone Number is :" + phoneNumberText);
+		Assert.assertEquals(phoneNumberText, Constants.PHONE_NUMBER);
+	}
+	@Test
 	public void verifySearchBoxExistTest() {
 		String searchBoxExist = loginPage.getSearchBoxValue();
 	}
