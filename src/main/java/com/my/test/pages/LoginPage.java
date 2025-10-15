@@ -10,6 +10,7 @@ public class LoginPage extends BasePage{
 	//1. By Locators
 	private By emailId = By.id("input-email");
 	private By password = By.id("input-password");
+	private By wishList = By.xpath("//span[contains(text(), 'Wish List (0)')]");
 	private By loginButton = By.cssSelector("input.btn.btn-primary");
 	private By registerAccountContinue = By.xpath("//a[text()='Continue']");
 	
@@ -28,6 +29,12 @@ public class LoginPage extends BasePage{
 		driver.findElement(loginButton).click();
 		
 		return new HomePage(driver);
+	}
+	public String getWishListValue() {
+		if(driver.findElement(wishList).isDisplayed()) {
+			return driver.findElement(wishList).getText();
+		}
+		return null;
 	}
 	public String getRegisterAccountContinueValue() {
 		if(driver.findElement(registerAccountContinue).isDisplayed()) {
