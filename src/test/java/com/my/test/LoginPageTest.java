@@ -37,6 +37,12 @@ public class LoginPageTest extends BaseTest {
 		Assert.assertEquals(phoneNumberText, Constants.PHONE_NUMBER);
 	}
 	@Test
+	public void verifyMyAccountHeaderTitleTest() {
+		String myAccountText = loginPage.getMyAccountHeaderTitleValue();
+		System.out.println("My Account is :" + myAccountText);
+		Assert.assertEquals(myAccountText, Constants.MY_ACCOUNT_HEADER_TITLE);
+	}
+	@Test
 	public void verifySearchBoxExistTest() {
 		String searchBoxExist = loginPage.getSearchBoxValue();
 	}
