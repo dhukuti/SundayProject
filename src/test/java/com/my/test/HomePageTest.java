@@ -24,6 +24,6 @@ public class HomePageTest extends BaseTest {
 		System.out.println("home page header is :" + headerValue);
 		Assert.assertEquals(headerValue, Constants.HEADER_PAGE_TITLE);
 	}
-	
+
 
 }

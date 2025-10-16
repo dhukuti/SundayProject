@@ -12,8 +12,7 @@ public class LoginPageTest extends BaseTest {
 	public void verifyLoginPageTitleTest() {
 		String title = loginPage.getLoginPageTitle();
 		System.out.println("login page title is : " + title);
-		Assert.assertEquals(title, Constants.LOGIN_PAGE_TITLE);
-				
+		Assert.assertEquals(title, Constants.LOGIN_PAGE_TITLE);			
 	}
 	@Test(priority=2)
 	public void loginTest() {
@@ -28,8 +27,60 @@ public class LoginPageTest extends BaseTest {
 	@Test
 	public void verifyRegisterAccountContinueTest() {
 		String registerAccountContinueValue = loginPage.getRegisterAccountContinueValue();
-		System.out.println("Register Account :" + registerAccountContinueValue);
+		System.out.println("Register Account is :" + registerAccountContinueValue);
 		Assert.assertEquals(registerAccountContinueValue, Constants.REGISTER_ACCOUNT_CONTINUE);
+	}
+	@Test
+	public void verifyCurrencyTitleTest() {
+		String currencyTitleText = loginPage.getCurrencyTitleValue();
+		System.out.println("Currency Title is :" + currencyTitleText);
+		Assert.assertEquals(currencyTitleText, Constants.CURRENCY_TITLE);
+	}
+	@Test
+	public void verifyPhoneNumberTitleTest() {
+		String phoneNumberText = loginPage.getPhoneNumberTitleValue();
+		System.out.println("Phone Number is :" + phoneNumberText);
+		Assert.assertEquals(phoneNumberText, Constants.PHONE_NUMBER);
+	}
+	@Test
+	public void verifyMyAccountHeaderTitleTest() {
+		String myAccountText = loginPage.getMyAccountHeaderTitleValue();
+		System.out.println("My Account is :" + myAccountText);
+		Assert.assertEquals(myAccountText, Constants.MY_ACCOUNT_HEADER_TITLE);
+	}
+	@Test
+	public void verifySearchBoxExistTest() {
+		String searchBoxExist = loginPage.getSearchBoxValue();
+	}
+	@Test
+	public void verifyInformationTitleTest() {
+		String informationTitleText = loginPage.getInformationTitleValue();
+		System.out.println("Information Title is :" + informationTitleText);
+		Assert.assertEquals(informationTitleText, Constants.INFORMATION_TITLE);
+	}
+	@Test
+	public void verifyCustomerServiceTitleTest() {
+		String customerServiceTitleText = loginPage.getCustomerServiceTitleValue();
+		System.out.println("Customer Service Title is :" + customerServiceTitleText);
+		Assert.assertEquals(customerServiceTitleText, Constants.CUSTOMER_SERVICE_TITLE);
+	}
+	@Test
+	public void verifyExtrasTitleTest() {
+		String extrasTitleText = loginPage.getExtrasTitleValue();
+		System.out.println("Extras title is :" + extrasTitleText);
+		Assert.assertEquals(extrasTitleText, Constants.EXTRAS_TITLE);
+	}
+	@Test
+	public void verifyMyAccountTitleTest() {
+		String myAccountTitleText = loginPage.getMyAccountTitleValue();
+		System.out.println("My Account title is :" + myAccountTitleText);
+		Assert.assertEquals(myAccountTitleText, Constants.MY_ACCOUNT_TITLE);
+	}
+	@Test
+	public void verifyNewCustomerTitle() {
+		String newCustomerTitleText = loginPage.getNewCustomerTitleValue();
+		System.out.println("New Customer title is :" + newCustomerTitleText);
+		Assert.assertEquals(newCustomerTitleText, Constants.NEW_CUSTOMER);
 	}
 
 }
