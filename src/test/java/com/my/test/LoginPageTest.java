@@ -49,6 +49,12 @@ public class LoginPageTest extends BaseTest {
 		Assert.assertEquals(myAccountText, Constants.MY_ACCOUNT_HEADER_TITLE);
 	}
 	@Test
+	public void verifyShoppingCartHeaderTitleTest() {
+		String shoppigCartText = loginPage.getShoppingCartHeaderTitleValue();
+		System.out.println("Shopping Cart is :" + shoppigCartText);
+		Assert.assertEquals(shoppigCartText, Constants.SHOPPING_CART);
+	}
+	@Test
 	public void verifySearchBoxExistTest() {
 		String searchBoxExist = loginPage.getSearchBoxValue();
 	}

@@ -15,6 +15,7 @@ public class LoginPage extends BasePage{
 	private By currencyTitle = By.xpath("//span[text()='Currency']");
 	private By phoneNumberTitle = By.xpath("//span[text()=123456789]");
 	private By myAccountHeaderTitle = By.xpath("//span[contains(text(), 'My Account')]");
+	private By shoppingCart = By.xpath("//span[contains(text(), 'Shopping Cart')]");
 	private By searchBox = By.cssSelector("input.form-control.input-lg");
 	private By registerAccountContinue = By.xpath("//a[text()='Continue']");
 	private By informationTitle = By.xpath("//h5[text()='Information']");
@@ -49,8 +50,7 @@ public class LoginPage extends BasePage{
 	public String getRegisterAccountContinueValue() {
 		if(driver.findElement(registerAccountContinue).isDisplayed()) {
 			return driver.findElement(registerAccountContinue).getText();
-
-		}
+			}
 		return null;
 	}
 	public String getCurrencyTitleValue() {
@@ -71,6 +71,12 @@ public class LoginPage extends BasePage{
 		}
 		return null;
 	}
+	public String getShoppingCartHeaderTitleValue() {
+		if(driver.findElement(shoppingCart).isDisplayed()) {
+			return driver.findElement(shoppingCart).getText();
+		}
+		return null;
+	}
 	public String getSearchBoxValue() {
 		if(driver.findElement(searchBox).isDisplayed()) {
 		}
@@ -81,8 +87,7 @@ public class LoginPage extends BasePage{
 			return driver.findElement(informationTitle).getText();
 		}
 		return null;
-		
-	}
+		}
 	public String getCustomerServiceTitleValue() {
 		if(driver.findElement(customerServiceTitle).isDisplayed()) {
 			return driver.findElement(customerServiceTitle).getText();
