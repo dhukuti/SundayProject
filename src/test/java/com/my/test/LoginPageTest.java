@@ -19,8 +19,8 @@ public class LoginPageTest extends BaseTest {
 		loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
 	}
 	@Test
-	public void verifyWishListText() {
-		String wishListValue = loginPage.getWishListValue();
+	public void verifyWishListTitleTest() {
+		String wishListValue = loginPage.getWishListTitleValue();
 		System.out.println("Wish List Value :" + wishListValue);
 		Assert.assertEquals(wishListValue, Constants.WISH_LIST);
 	}

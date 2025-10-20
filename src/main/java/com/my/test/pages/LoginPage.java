@@ -41,7 +41,7 @@ public class LoginPage extends BasePage{
 		
 		return new HomePage(driver);
 	}
-	public String getWishListValue() {
+	public String getWishListTitleValue() {
 		if(driver.findElement(wishList).isDisplayed()) {
 			return driver.findElement(wishList).getText();
 		}
