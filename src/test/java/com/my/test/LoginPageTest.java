@@ -88,5 +88,11 @@ public class LoginPageTest extends BaseTest {
 		System.out.println("New Customer title is :" + newCustomerTitleText);
 		Assert.assertEquals(newCustomerTitleText, Constants.NEW_CUSTOMER);
 	}
+	@Test
+	public void verifyReturningCustomer() {
+		String returningCustomerTitleText = loginPage.getReturningCustomerTitleValue();
+		System.out.println("Returning Customer title is :" + returningCustomerTitleText);
+		Assert.assertEquals(returningCustomerTitleText, Constants.RETURNING_CUSTOMER);
+	}
 
 }
