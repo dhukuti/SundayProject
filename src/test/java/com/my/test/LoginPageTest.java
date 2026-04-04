@@ -55,6 +55,12 @@ public class LoginPageTest extends BaseTest {
 		Assert.assertEquals(shoppigCartText, Constants.SHOPPING_CART);
 	}
 	@Test
+	public void verifyCheckoutTitleTest() {
+		String checkoutText = loginPage.getCheckoutTitle();
+		System.out.println("Checkout Text is :" + checkoutText);
+		Assert.assertEquals(checkoutText, Constants.CHECKOUT_TITLE);
+	}
+	@Test
 	public void verifySearchBoxExistTest() {
 		String searchBoxExist = loginPage.getSearchBoxValue();
 	}

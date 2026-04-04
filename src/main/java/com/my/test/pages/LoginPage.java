@@ -16,6 +16,7 @@ public class LoginPage extends BasePage{
 	private By phoneNumberTitle = By.xpath("//span[text()=123456789]");
 	private By myAccountHeaderTitle = By.xpath("//span[contains(text(), 'My Account')]");
 	private By shoppingCart = By.xpath("//span[contains(text(), 'Shopping Cart')]");
+	private By checkOut = By.xpath("//span[contains(text(), 'Checkout')]");
 	private By searchBox = By.cssSelector("input.form-control.input-lg");
 	private By registerAccountContinue = By.xpath("//a[text()='Continue']");
 	private By informationTitle = By.xpath("//h5[text()='Information']");
@@ -75,6 +76,12 @@ public class LoginPage extends BasePage{
 	public String getShoppingCartHeaderTitleValue() {
 		if(driver.findElement(shoppingCart).isDisplayed()) {
 			return driver.findElement(shoppingCart).getText();
+		}
+		return null;
+	}
+	public String getCheckoutTitle() {
+		if(driver.findElement(checkOut).isDisplayed()) {
+			return driver.findElement(checkOut).getText();
 		}
 		return null;
 	}
