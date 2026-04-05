@@ -10,10 +10,12 @@ public class LoginPage extends BasePage{
 	//1. By Locators
 	private By emailId = By.id("input-email");
 	private By password = By.id("input-password");
+	private By phoneNumberTitle = By.xpath("//span[text()=123456789]");
+	private By myAccountMenu = By.xpath("//span[text()='My Account']");
 	private By wishList = By.xpath("//span[contains(text(), 'Wish List (0)')]");
 	private By loginButton = By.cssSelector("input.btn.btn-primary");
 	private By currencyTitle = By.xpath("//span[text()='Currency']");
-	private By phoneNumberTitle = By.xpath("//span[text()=123456789]");
+	
 	private By myAccountHeaderTitle = By.xpath("//span[contains(text(), 'My Account')]");
 	private By shoppingCart = By.xpath("//span[contains(text(), 'Shopping Cart')]");
 	private By checkOut = By.xpath("//span[contains(text(), 'Checkout')]");
@@ -42,6 +44,12 @@ public class LoginPage extends BasePage{
 		driver.findElement(loginButton).click();
 		
 		return new HomePage(driver);
+	}
+	public String getMyAccountMenuValue() {
+		if(driver.findElement(myAccountMenu).isDisplayed()) {
+			return driver.findElement(myAccountMenu).getText();
+		}
+		return null;
 	}
 	public String getWishListTitleValue() {
 		if(driver.findElement(wishList).isDisplayed()) {

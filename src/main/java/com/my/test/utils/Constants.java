@@ -6,6 +6,7 @@ public class Constants {
 	public static final String HOME_PAGE_TITLE = "My Account";
 	public static final String CURRENCY_TITLE = "Currency";
 	public static final String PHONE_NUMBER = "123456789";
+	public static final String MY_ACCOUNT_HEADER = "My Account"; 
 	public static final String MY_ACCOUNT_HEADER_TITLE = "My Account";
 	public static final String WISH_LIST = "Wish List (0)";
 	public static final String SHOPPING_CART = "Shopping Cart";

@@ -43,6 +43,12 @@ public class LoginPageTest extends BaseTest {
 		Assert.assertEquals(phoneNumberText, Constants.PHONE_NUMBER);
 	}
 	@Test
+	public void verifyMyAccountMenuTest() {
+		String myAccountMenuText = loginPage.getMyAccountMenuValue();
+		System.out.println("My Account Menu is :" + myAccountMenuText);
+		Assert.assertEquals(myAccountMenuText, Constants.MY_ACCOUNT_HEADER);
+	}
+	@Test
 	public void verifyMyAccountHeaderTitleTest() {
 		String myAccountText = loginPage.getMyAccountHeaderTitleValue();
 		System.out.println("My Account is :" + myAccountText);
