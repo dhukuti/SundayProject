@@ -20,6 +20,7 @@ public class LoginPage extends BasePage{
 	private By shoppingCart = By.xpath("//span[contains(text(), 'Shopping Cart')]");
 	private By checkOut = By.xpath("//span[contains(text(), 'Checkout')]");
 	private By searchBox = By.cssSelector("input.form-control.input-lg");
+	private By desktopMenuTitle = By.xpath("//a[text()='Desktops']");
 	private By registerAccountContinue = By.xpath("//a[text()='Continue']");
 	private By informationTitle = By.xpath("//h5[text()='Information']");
 	private By customerServiceTitle = By.xpath("//h5[text()='Customer Service']");
@@ -95,6 +96,12 @@ public class LoginPage extends BasePage{
 	}
 	public String getSearchBoxValue() {
 		if(driver.findElement(searchBox).isDisplayed()) {
+		}
+		return null;
+	}
+	public String getDesktopMenuTitle() {
+		if(driver.findElement(desktopMenuTitle).isDisplayed()) {
+			return driver.findElement(desktopMenuTitle).getText();
 		}
 		return null;
 	}

@@ -71,6 +71,12 @@ public class LoginPageTest extends BaseTest {
 		String searchBoxExist = loginPage.getSearchBoxValue();
 	}
 	@Test
+	public void verifyDesktopMenuTitleTest() {
+		String desktopText = loginPage.getDesktopMenuTitle();
+		System.out.println("Desktop Text is : " + desktopText);
+		Assert.assertEquals(desktopText, Constants.DESKTOP_MENU_TITLE);
+	}
+	@Test
 	public void verifyInformationTitleTest() {
 		String informationTitleText = loginPage.getInformationTitleValue();
 		System.out.println("Information Title is :" + informationTitleText);
