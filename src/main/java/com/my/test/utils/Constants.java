@@ -13,6 +13,7 @@ public class Constants {
 	public static final String CHECKOUT_TITLE = "Checkout";
 	public static final String HEADER_PAGE_TITLE = "Qafox.com";
 	public static final String DESKTOP_MENU_TITLE = "Desktops";
+	public static final String LAPTOPS_NOTEBOOKS_TITLE = "Laptops & Notebooks"; 
     public static final String REGISTER_ACCOUNT_CONTINUE = "Continue";
     public static final String INFORMATION_TITLE = "Information";
     public static final String CUSTOMER_SERVICE_TITLE = "Customer Service";

@@ -77,6 +77,12 @@ public class LoginPageTest extends BaseTest {
 		Assert.assertEquals(desktopText, Constants.DESKTOP_MENU_TITLE);
 	}
 	@Test
+	public void verifyLaptopsAndNotebooksMenuTitleTest() {
+		String laptopsAndNotebooksText = loginPage.getLaptopsAndNotebooksMenuTitle();
+		System.out.println("Laptops & Notebooks Text is : " + laptopsAndNotebooksText);
+		Assert.assertEquals(laptopsAndNotebooksText, Constants.LAPTOPS_NOTEBOOKS_TITLE);
+	}
+	@Test
 	public void verifyInformationTitleTest() {
 		String informationTitleText = loginPage.getInformationTitleValue();
 		System.out.println("Information Title is :" + informationTitleText);

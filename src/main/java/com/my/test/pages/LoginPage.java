@@ -14,13 +14,13 @@ public class LoginPage extends BasePage{
 	private By myAccountMenu = By.xpath("//span[text()='My Account']");
 	private By wishList = By.xpath("//span[contains(text(), 'Wish List (0)')]");
 	private By loginButton = By.cssSelector("input.btn.btn-primary");
-	private By currencyTitle = By.xpath("//span[text()='Currency']");
-	
+	private By currencyTitle = By.xpath("//span[text()='Currency']");	
 	private By myAccountHeaderTitle = By.xpath("//span[contains(text(), 'My Account')]");
 	private By shoppingCart = By.xpath("//span[contains(text(), 'Shopping Cart')]");
 	private By checkOut = By.xpath("//span[contains(text(), 'Checkout')]");
 	private By searchBox = By.cssSelector("input.form-control.input-lg");
 	private By desktopMenuTitle = By.xpath("//a[text()='Desktops']");
+	private By laptopsAndNotebooksMenuTitle = By.xpath("//a[text()='Laptops & Notebooks']");
 	private By registerAccountContinue = By.xpath("//a[text()='Continue']");
 	private By informationTitle = By.xpath("//h5[text()='Information']");
 	private By customerServiceTitle = By.xpath("//h5[text()='Customer Service']");
@@ -102,6 +102,12 @@ public class LoginPage extends BasePage{
 	public String getDesktopMenuTitle() {
 		if(driver.findElement(desktopMenuTitle).isDisplayed()) {
 			return driver.findElement(desktopMenuTitle).getText();
+		}
+		return null;
+	}
+	public String getLaptopsAndNotebooksMenuTitle() {
+		if(driver.findElement(laptopsAndNotebooksMenuTitle).isDisplayed()) {
+			return driver.findElement(laptopsAndNotebooksMenuTitle).getText();
 		}
 		return null;
 	}
